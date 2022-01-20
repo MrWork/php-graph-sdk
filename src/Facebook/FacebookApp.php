@@ -120,7 +120,6 @@ class FacebookApp implements \Serializable
     public function __unserialize(array $data): void
     {
         list($id, $secret) = $data;
-
         $this->__construct($id, $secret);
     }
 }
