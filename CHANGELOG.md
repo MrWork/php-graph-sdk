@@ -6,6 +6,7 @@ Starting with version 5, the Facebook PHP SDK follows [SemVer](http://semver.org
 
 Version 5 of the Facebook PHP SDK is a complete refactor of version 4. It comes loaded with lots of new features and a friendlier API.
 
+- 5.9.0 (2022-01-20) Support php8.1
 - 5.7.1 (2018-XX-XX)
 - 5.7.0 (2018-12-12)
   - Add `joined` to list of fields to be cast to `\DateTime` (#950)

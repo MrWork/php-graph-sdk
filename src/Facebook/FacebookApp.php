@@ -91,7 +91,7 @@ class FacebookApp
      *
      * @return string
      */
-    public function serialize(): array
+    public function serialize(): string
     {
         return implode('|', $this->__serialize());
     }
@@ -117,9 +117,9 @@ class FacebookApp
     /**
      * @internal
      */
-    public function __unserialize(array $data): void
+    public function __unserialize(string $serialized): void
     {
-        list($id, $secret) = explode('|', $data);
+        list($id, $secret) = explode('|', $serialized);
         $this->__construct($id, $secret);
     }
 }
