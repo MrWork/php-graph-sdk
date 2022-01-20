@@ -103,7 +103,7 @@ class FacebookApp implements \Serializable
      */
     public function unserialize(string $serialized): void
     {
-        $this->__unserialize($serialized);
+        $this->__unserialize(explode('|', $serialized));
     }
 
     /**
@@ -117,9 +117,9 @@ class FacebookApp implements \Serializable
     /**
      * @internal
      */
-    public function __unserialize(string $serialized): void
+    public function __unserialize(array $data): void
     {
-        list($id, $secret) = explode('|', $serialized);
+        list($id, $secret) = $data;
         $this->__construct($id, $secret);
     }
 }
